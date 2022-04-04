@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.HomeController">
+   <right>
+      <AnchorPane prefHeight="458.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="48.0" layoutY="49.0" prefHeight="60.0" prefWidth="221.0" text="GCU OPTICANS">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="458.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="92.0" layoutY="66.0" text="Welcome to GCU Opticians">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerNow_Btn" layoutX="39.0" layoutY="342.0" mnemonicParsing="false" onAction="#openRegisterWindow" prefHeight="33.0" prefWidth="150.0" text="Register Now" />
+            <Button fx:id="login_btn" layoutX="235.0" layoutY="342.0" mnemonicParsing="false" onAction="#openLoginWindow" prefHeight="33.0" prefWidth="150.0" text="Login" />
+            <Button fx:id="close_btn" layoutX="138.0" layoutY="389.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="33.0" prefWidth="150.0" text="Close" />
+            <Label layoutX="41.0" layoutY="325.0" text="Become part of the family..." />
+            <Label layoutX="258.0" layoutY="325.0" text="Already a member?" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
