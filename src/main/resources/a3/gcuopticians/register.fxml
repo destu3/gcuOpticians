@@ -1,40 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="655.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.RegisterController">
+<AnchorPane prefHeight="641.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.RegisterController">
    <children>
-      <Label layoutX="71.0" layoutY="32.0" prefHeight="27.0" prefWidth="309.0" text="Become a member of GCU Opticians">
+      <Label layoutX="222.0" layoutY="23.0" prefHeight="27.0" prefWidth="309.0" text="Become a member of GCU Opticians">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="patientid_txt" layoutX="261.0" layoutY="109.0" promptText="maximum of 5 characters" />
-      <TextField fx:id="fname_txt" layoutX="261.0" layoutY="164.0" />
-      <TextField fx:id="lname_txt" layoutX="261.0" layoutY="203.0" />
-      <TextField fx:id="dob_txt" layoutX="261.0" layoutY="255.0" />
-      <TextField fx:id="mobile_txt" layoutX="261.0" layoutY="315.0" />
-      <TextField fx:id="username_txt" layoutX="261.0" layoutY="378.0" />
-      <Label layoutX="48.0" layoutY="113.0" text="Choose your unique ID" />
-      <Label layoutX="48.0" layoutY="159.0" text="Enter your first name" />
-      <Label layoutX="48.0" layoutY="207.0" text="Enter your last name" />
-      <Label layoutX="48.0" layoutY="259.0" text="Enter your date of birth" />
-      <Label layoutX="48.0" layoutY="319.0" text="Enter your mobile number" />
-      <Label layoutX="48.0" layoutY="373.0" text="Choose a username" />
-      <TextField fx:id="role_txt" alignment="CENTER" editable="false" layoutX="261.0" layoutY="479.0" text="Patient" />
-      <Label layoutX="48.0" layoutY="425.0" text="Choose a password" />
-      <Label layoutX="48.0" layoutY="474.0" prefHeight="17.0" prefWidth="31.0" text="Role" />
-      <PasswordField fx:id="password_txt" layoutX="261.0" layoutY="421.0" />
-      <Button fx:id="register_btn" layoutX="261.0" layoutY="518.0" mnemonicParsing="false" onAction="#registerPatient" prefHeight="27.0" prefWidth="149.0" text="Register" />
-      <Button fx:id="login_btn" layoutX="48.0" layoutY="591.0" mnemonicParsing="false" onAction="#openLoginWindow" prefHeight="27.0" prefWidth="149.0" text="Login" />
-      <Button fx:id="home_btn" layoutX="261.0" layoutY="591.0" mnemonicParsing="false" onAction="#openHomeWindow" prefHeight="27.0" prefWidth="149.0" text="Home" />
-      <Label layoutX="71.0" layoutY="574.0" text="Already a member?" />
-      <Label layoutX="279.0" layoutY="574.0" text="Return to home page" />
+      <TextField fx:id="patientid_txt" layoutX="266.0" layoutY="78.0" prefHeight="30.0" prefWidth="222.0" promptText="Choose a unique ID " />
+      <TextField fx:id="fname_txt" layoutX="266.0" layoutY="125.0" prefHeight="30.0" prefWidth="222.0" promptText="Enter your first name" />
+      <TextField fx:id="lname_txt" layoutX="266.0" layoutY="180.0" prefHeight="30.0" prefWidth="222.0" promptText="Enter your last name" />
+      <TextField fx:id="mobile_txt" layoutX="266.0" layoutY="279.0" prefHeight="30.0" prefWidth="222.0" promptText="Enter your mobile number" />
+      <TextField fx:id="username_txt" layoutX="266.0" layoutY="328.0" prefHeight="30.0" prefWidth="222.0" promptText="Choose a username" />
+      <TextField fx:id="role_txt" editable="false" layoutX="266.0" layoutY="426.0" prefHeight="30.0" prefWidth="222.0" text="Patient" />
+      <PasswordField fx:id="password_txt" layoutX="266.0" layoutY="380.0" prefHeight="30.0" prefWidth="222.0" promptText="Choose a password" />
+      <Button fx:id="register_btn" layoutX="266.0" layoutY="473.0" mnemonicParsing="false" onAction="#registerPatient" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #1b59a6;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Button fx:id="login_btn" layoutX="214.0" layoutY="554.0" mnemonicParsing="false" onAction="#openLoginWindow" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #1b59a6;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Button fx:id="home_btn" layoutX="405.0" layoutY="554.0" mnemonicParsing="false" onAction="#openHomeWindow" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #1b59a6;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Label layoutX="221.0" layoutY="527.0" text="Already a member?">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Label>
+      <Label layoutX="436.0" layoutY="527.0" text="Home Page">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="date_picker" editable="false" layoutX="266.0" layoutY="231.0" prefHeight="30.0" prefWidth="222.0" promptText="Enter your DOB" />
+      <Pane prefHeight="644.0" prefWidth="201.0" style="-fx-background-color: #1b59a6;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="202.0" fitWidth="210.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/gculogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="close_btn" layoutX="310.0" layoutY="589.0" mnemonicParsing="false" onAction="#close" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #1b59a6;" text="Close" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

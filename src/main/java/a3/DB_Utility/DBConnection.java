@@ -4,12 +4,11 @@ import java.sql.*;
 
 public class DBConnection {
 
-    //establishes connection
+    //establishes connection to database(Embedded)
     public static Connection connectionToDatabase(){
         try {
             Class.forName("org.sqlite.JDBC");//connects the sql driver link/library
             Connection con = DriverManager.getConnection("jdbc:sqlite:gcuOpticians.db");
-            System.out.println("Connection was successful");
             return con;
 
         }catch (Exception e){
@@ -18,6 +17,4 @@ public class DBConnection {
             return null;
         }
     }
-
-
 }

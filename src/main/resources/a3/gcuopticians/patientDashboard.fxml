@@ -1,12 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.PatientDashboardController">
+<AnchorPane prefHeight="702.0" prefWidth="1160.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.PatientDashboardController">
    <children>
-      <Label fx:id="id_label" layoutX="139.0" layoutY="67.0" text="Label" />
-      <Label fx:id="fname_label" layoutX="139.0" layoutY="110.0" text="Label" />
-      <Label fx:id="lname_label" layoutX="139.0" layoutY="154.0" text="Label" />
+      <Label fx:id="fullname_label" layoutX="968.0" layoutY="31.0" text="Label">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font></Label>
+      <TableView fx:id="table_appointments" layoutX="293.0" layoutY="59.0" onMouseClicked="#getSelectedAppointment" prefHeight="565.0" prefWidth="835.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="119.0" text="Appointment ID" />
+          <TableColumn fx:id="col_patient" prefWidth="119.0" text="Patient " />
+            <TableColumn fx:id="col_optician" prefWidth="119.0" text="optician" />
+            <TableColumn fx:id="col_status" prefWidth="119.0" text="status" />
+            <TableColumn fx:id="col_service" prefWidth="119.0" text="service" />
+            <TableColumn fx:id="col_time" prefWidth="119.0" text="time" />
+            <TableColumn fx:id="col_date" prefWidth="119.0" text="date" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="702.0" prefWidth="252.0" style="-fx-background-color: #1b59a6;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="238.0" fitWidth="240.0" layoutX="8.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/gculogo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="id_label" layoutX="12.0" layoutY="681.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font></Label>
+            <TextField fx:id="service_txt" layoutX="40.0" layoutY="309.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter the service you require" />
+            <DatePicker fx:id="date_picker" editable="false" layoutX="40.0" layoutY="394.0" prefHeight="25.0" prefWidth="174.0" promptText="Choose appointment date" />
+            <TextField fx:id="time_txt" layoutX="40.0" layoutY="351.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter desired time (24:00)" />
+            <Button fx:id="book_btn" layoutX="39.0" layoutY="455.0" mnemonicParsing="false" onAction="#bookAppointment" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: white;" text="Book New Appointment" textFill="#1b59a6">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout_btn" layoutX="39.0" layoutY="556.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: white;" text="Log out" textFill="#1b59a6">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="close_btn" layoutX="39.0" layoutY="604.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: white;" text="Close" textFill="#1b59a6">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Label layoutX="293.0" layoutY="31.0" text="Your Appointments">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="appointmentid_txt" layoutX="293.0" layoutY="644.0" prefHeight="25.0" prefWidth="174.0" promptText="Appointment ID" />
+      <TextField fx:id="status_txt" layoutX="493.0" layoutY="644.0" prefHeight="25.0" prefWidth="174.0" promptText="Current status" />
+      <Button fx:id="terminate_btn" layoutX="1041.0" layoutY="644.0" mnemonicParsing="false" onAction="#terminateTreatment" prefHeight="26.0" prefWidth="87.0" text="Terminate" textFill="#c35252">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

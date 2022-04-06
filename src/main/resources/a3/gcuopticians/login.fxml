@@ -4,27 +4,65 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="469.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.LoginController">
+<AnchorPane prefHeight="500.0" prefWidth="445.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a3.Controllers.LoginController">
    <children>
-      <Label layoutX="192.0" layoutY="38.0" prefHeight="27.0" prefWidth="102.0" text="Login Page">
+      <Label layoutX="275.0" layoutY="38.0" prefHeight="27.0" prefWidth="102.0" text="Login Page">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Georgia Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="187.0" layoutY="110.0" text="Username" />
-      <Label layoutX="187.0" layoutY="155.0" text="Password" />
-      <TextField fx:id="username_txt" layoutX="261.0" layoutY="106.0" />
-      <TextField fx:id="password_txt" layoutX="261.0" layoutY="151.0" />
-      <RadioButton fx:id="patient_radio_btn" layoutX="187.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="64.0" text="Patient" />
-      <RadioButton fx:id="optician_radio_btn" layoutX="272.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="71.0" text="Optician" />
-      <Label layoutX="187.0" layoutY="200.0" text="Choose role" />
-      <Button fx:id="login_btn" layoutX="261.0" layoutY="295.0" mnemonicParsing="false" onAction="#loginVerification" prefHeight="25.0" prefWidth="149.0" text="Login" />
-      <Button fx:id="register_btn" layoutX="48.0" layoutY="377.0" mnemonicParsing="false" prefWidth="149.0" text="Register" />
-      <Button fx:id="home_btn" layoutX="261.0" layoutY="377.0" mnemonicParsing="false" prefWidth="149.0" text="Home" />
-      <Label layoutX="84.0" layoutY="360.0" text="Join the family" />
-      <Label layoutX="279.0" layoutY="360.0" text="Return to home page" />
+      <TextField fx:id="username_txt" layoutX="249.0" layoutY="107.0" prefHeight="25.0" prefWidth="149.0" promptText="enter your username" />
+      <TextField fx:id="password_txt" layoutX="249.0" layoutY="152.0" prefHeight="25.0" prefWidth="149.0" promptText="enter your password" />
+      <RadioButton fx:id="patient_radio_btn" layoutX="238.0" layoutY="234.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="74.0" text="Patient">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="optician_radio_btn" layoutX="331.0" layoutY="234.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" text="Optician">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></RadioButton>
+      <Label layoutX="281.0" layoutY="200.0" text="Choose role">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="login_btn" layoutX="251.0" layoutY="266.0" mnemonicParsing="false" onAction="#loginVerification" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #1b59a6;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Button fx:id="register_btn" layoutX="250.0" layoutY="356.0" mnemonicParsing="false" onAction="#openRegisterWindow" prefWidth="149.0" style="-fx-background-color: #1b59a6;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Button fx:id="home_btn" layoutX="250.0" layoutY="411.0" mnemonicParsing="false" onAction="#openHomeWindow" prefWidth="149.0" style="-fx-background-color: #1b59a6;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Button>
+      <Label layoutX="280.0" layoutY="332.0" text="Join the family">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Label>
+      <Label layoutX="261.0" layoutY="389.0" text="Return to home page">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Label>
+      <Pane layoutX="-5.0" prefHeight="500.0" prefWidth="211.0" style="-fx-background-color: #1b59a6;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="206.0" fitWidth="259.0" layoutX="3.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/gculogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="close_btn" cancelButton="true" layoutX="249.0" layoutY="450.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #1b59a6;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Georgia Italic" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>
