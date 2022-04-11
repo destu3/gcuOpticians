@@ -1,0 +1,50 @@
+@startuml
+class a3.Models.Optician {
+~ String opticina_id
+~ String name
+~ String speciality
+~ String username
+~ String password
+~ String role
++ String getOpticina_id()
++ String getName()
++ String getSpeciality()
++ String getUsername()
++ String getPassword()
++ String getRole()
+}
+class a3.Models.Appointment {
+~ String appointment_id
+~ String patient_id
+~ String optician_id
+~ String status
+~ String service
+~ String time
+~ String date
++ String getAppointment_id()
++ String getPatient_id()
++ String getOptician_id()
++ String getStatus()
++ String getService()
++ String getTime()
++ String getDate()
+}
+class a3.Models.Patient {
+~ String patient_id
+~ String fname
+~ String lname
+~ String dob
+~ int mobile_number
+~ String username
+~ String password
+~ String role
++ String getPatient_id()
++ String getFname()
++ String getLname()
++ String getDob()
++ int getMobile_number()
++ String getUsername()
++ String getPassword()
++ String getRole()
+}
+@enduml

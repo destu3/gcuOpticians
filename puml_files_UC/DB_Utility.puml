@@ -1,0 +1,5 @@
+@startuml
+class a3.DB_Utility.DBConnection {
++ {static} Connection connectionToDatabase()
+}
+@enduml

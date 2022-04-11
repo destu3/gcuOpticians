@@ -29,7 +29,7 @@ public class LoginController implements Initializable {
     @FXML
     private Button login_btn;
     @FXML
-    private TextField password_txt;
+    private PasswordField password_txt;
     @FXML
     private Button register_btn;
     @FXML

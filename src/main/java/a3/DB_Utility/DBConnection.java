@@ -8,7 +8,7 @@ public class DBConnection {
     public static Connection connectionToDatabase(){
         try {
             Class.forName("org.sqlite.JDBC");//connects the sql driver link/library
-            Connection con = DriverManager.getConnection("jdbc:sqlite:gcuOpticians.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:databases/OpticiansDB/gcuOpticians.db");
             return con;
 
         }catch (Exception e){

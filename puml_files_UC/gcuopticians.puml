@@ -1,0 +1,9 @@
+@startuml
+class a3.gcuopticians.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+
+
+javafx.application.Application <|-- a3.gcuopticians.Main
+@enduml
