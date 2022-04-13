@@ -22,8 +22,6 @@ import java.util.ResourceBundle;
 public class RegisterController implements Initializable {
 
     @FXML
-    private TextField dob_txt;
-    @FXML
     private TextField fname_txt;
     @FXML
     private Button home_btn;
