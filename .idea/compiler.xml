@@ -9,8 +9,5 @@
         <module name="gcuOpticians" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="gcuOpticians" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
